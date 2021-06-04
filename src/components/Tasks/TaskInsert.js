@@ -26,6 +26,7 @@ class TaskInsert extends React.Component {
       </div>
     );
   };
+
   renderbrowser = ({ input, label, meta }) => {
     return (
       <div
@@ -35,9 +36,7 @@ class TaskInsert extends React.Component {
           <input
             type="text"
             value={
-              input.value && input.value.length > 0
-                ? input.value[0].name
-                : label
+              input.value && input.value.length > 0 ? input.value[0].name : ""
             }
             placeholder={label}
             readOnly

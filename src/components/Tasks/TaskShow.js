@@ -8,16 +8,16 @@ class TaskShow extends React.Component {
   componentDidMount() {
     this.props.getTasks();
   }
+
   renderImages = () => {
     const { tasks } = this.props;
     return tasks.map((task) => (
       <div key={task.id} className="row">
         <div className="three wide column">
-          <div key={task.id} className="ui small image ">
+          <div className="ui small image ">
             <img alt={task.Text} src={task.Picture} />
           </div>
         </div>
-
         <div className="thirteen wide column">
           <p>{task.Text}</p>
         </div>
